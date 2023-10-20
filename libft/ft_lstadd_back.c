@@ -1,37 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cvozmedi <cvozmedi@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/14 14:58:31 by cvozmedi          #+#    #+#             */
-/*   Updated: 2023/10/05 15:46:43 by cvozmedi         ###   ########.fr       */
+/*   Created: 2023/10/20 16:29:59 by cvozmedi          #+#    #+#             */
+/*   Updated: 2023/10/20 16:30:50 by cvozmedi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(int c)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
-		return (1);
-	return (0);
-}
-/*
-#include <stdio.h>
+	t_list	*tmp;
 
-int main()
-{
-	char cadena[] = ";0sR(h&R1/";
-	int i;
-	i = 0;
-	while (cadena[i] != '\0')
+	if (*lst == NULL)
 	{
-		printf("%c, %d\n", cadena[i], ft_isalpha(cadena[i]));
-		//printf("%c, %d\n", cadena[i], isalpha(cadena[i]));
-		i++;
+		*lst = new;
+		return ;
 	}
-	return(0);
+	tmp = *lst;
+	while (tmp -> next)
+		tmp = tmp -> next;
+	tmp -> next = new;
 }
-*/

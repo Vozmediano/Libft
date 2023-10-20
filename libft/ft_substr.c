@@ -31,6 +31,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	return (subst);
 }
 /*
+#include <stdio.h>
+
 int main()
 {
     const char *original = "Hola, mundo!";

@@ -23,10 +23,10 @@ int	ft_toupper(int c)
 
 int main()
 {
-	char let;
+	char let = 'g';
 
-	let = 'g';
-	printf("%c", ft_toupper(let));
+	printf("%d\n", ft_toupper(let));
+	printf("%d\n", toupper(let));
 	return (0);
 }
 */

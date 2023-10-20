@@ -37,27 +37,12 @@ int main()
     size_t search_size = 4;
 
     void *result = ft_memchr(str, search_char, search_size);
+    //void *result = memchr(str, search_char, search_size);
 
     if (result != NULL)
-        printf("Character found at position: %ld\n", (char *)result - str); 
+        printf("Char encontrado en posicion: %ld\n", (char *)result - str); 
 	else
-        printf("Character not found.\n");
-
-    return 0;
-}
-
-int main()
-{
-    const char *str = "Hello, World!";
-    int search_char = 'W';
-    size_t search_size = 4;
-
-    void *result = memchr(str, search_char, search_size);
-
-    if (result != NULL)
-        printf("Character found at position: %ld\n", (char *)result - str); 
-	else
-        printf("Character not found.\n");
+        printf("Char no encontrado.\n");
 
     return 0;
 }

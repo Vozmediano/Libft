@@ -29,21 +29,8 @@ int main()
    i = 0;
    while(cadena[i])
    {
-      printf("%c, %d\n", cadena[i], isascii(cadena[i]));
-	  i++;
-   }
-   return 0;
-}
-
-int main()
-{
-   char cadena[] = ";0ñsáR(h&~?RÛ1/";
-   int i;
-
-   i = 0;
-   while(cadena[i])
-   {
       printf("%c, %d\n", cadena[i], ft_isascii(cadena[i]));
+      //printf("%c, %d\n", cadena[i], isascii(cadena[i]));
 	  i++;
    }
    return 0;

@@ -36,13 +36,14 @@ int	ft_atoi(const char *str)
 	}
 	return (res * s);
 }
+/*
+#include <stdio.h>
+int		main()
+{
+	char str[] = " \t\v\n\f\r 123";
+	int number = ft_atoi(str);
 
-// #include <stdio.h>
-// int		main()
-// {
-// 	char str[] = " \t\v\n\f\r 123";
-// 	int number = ft_atoi(str);
-
-// 	printf("%d\n", number);
-// 	return(0);
-// }
+	printf("%d\n", number);
+	return(0);
+}
+*/

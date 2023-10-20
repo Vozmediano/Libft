@@ -30,12 +30,14 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 }
 /*
 #include <stdio.h>
+
 int main()
 {
     char src[] = "Hello, World!";
     char dst[2];
 
     size_t result = ft_strlcpy(dst, src, sizeof(dst));
+	//size_t result = strlcpy(dst, src, sizeof(dst));
 
     printf("Source: %s\n", src);
     printf("Destination: %s\n", dst);

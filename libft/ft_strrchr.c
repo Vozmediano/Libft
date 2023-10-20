@@ -27,37 +27,24 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (NULL);
 }
-// #include <stdio.h>
-// #include <string.h>
+/*
+#include <stdio.h>
+#include <string.h>
 
-// int main()
-// {
-// 	const char *str = "Hello, World!";
-// 	int character_to_find = 'o';
+int main()
+{
+	const char *str = "Hello, World!";
+	int character_to_find = 'o';
 
-// 	char *result = ft_strrchr(str, character_to_find);
+	char *result = ft_strrchr(str, character_to_find);
+	//char *result = strrchr(str, character_to_find);
 
-// 	if (result != NULL)
-// 		printf("Last occurrence of '%c' found at position: %s\n", 
-// 			character_to_find, result);
-// 	else
-// 		printf("Character '%c' not found in the string.\n", character_to_find);
+	if (result != NULL)
+		printf("Ultima ocurrencia de '%c' encontrada en la posicion: %s\n", 
+			character_to_find, result);
+	else
+		printf("Char '%c' no encontrado en el string.\n", character_to_find);
 
-// 	return 0;
-// }
-
-// int main()
-// {
-// 	const char *str = "Hello, World!";
-// 	int character_to_find = 'o';
-
-// 	char *resulta = strrchr(str, character_to_find);
-
-// 	if (resulta != NULL)
-// 		printf("Last occurrence of '%c' found at position: %s\n", 
-// 			character_to_find, resulta);
-// 	else
-// 		printf("Character '%c' not found in the string.\n", character_to_find);
-
-// 	return 0;
-// }
+	return 0;
+}
+*/

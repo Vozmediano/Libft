@@ -1,37 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cvozmedi <cvozmedi@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/14 14:58:31 by cvozmedi          #+#    #+#             */
-/*   Updated: 2023/10/05 15:46:43 by cvozmedi         ###   ########.fr       */
+/*   Created: 2023/10/20 16:31:09 by cvozmedi          #+#    #+#             */
+/*   Updated: 2023/10/20 16:32:04 by cvozmedi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(int c)
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
-		return (1);
-	return (0);
+	(*del)(lst -> content);
+	free(lst);
 }
-/*
-#include <stdio.h>
-
-int main()
-{
-	char cadena[] = ";0sR(h&R1/";
-	int i;
-	i = 0;
-	while (cadena[i] != '\0')
-	{
-		printf("%c, %d\n", cadena[i], ft_isalpha(cadena[i]));
-		//printf("%c, %d\n", cadena[i], isalpha(cadena[i]));
-		i++;
-	}
-	return(0);
-}
-*/

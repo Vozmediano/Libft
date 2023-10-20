@@ -17,15 +17,16 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 	unsigned int	i;
 
 	i = 0;
-	if (!s)
-		return ;
 	while (s[i] != '\0')
 	{
-		(*f)(i, (s + i));
+		(*f)(i, &s[i]);
 		i++;
 	}
 }
 /*
+#include <stdio.h>
+#include <string.h>
+
 int main()
 {
     char cadena[] = "Hola";

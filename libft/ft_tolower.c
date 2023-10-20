@@ -23,10 +23,10 @@ int	ft_tolower(int c)
 
 int main()
 {
-	char let;
+	char let = 'N';
 
-	let = 'N';
-	printf("%c", ft_tolower(let));
+	printf("%d\n", ft_tolower(let));
+	//printf("%d\n", tolower(let));
 	return (0);
 }
 */

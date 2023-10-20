@@ -37,7 +37,8 @@ void	ft_putnbr_fd(int n, int fd)
 	}
 }
 /*
-int main() {
+int main()
+{
     int number = 12345;
     int file_descriptor = 1;
 

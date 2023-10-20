@@ -35,11 +35,11 @@ int main() {
     char buffer[20];
     size_t buffer_size = sizeof(buffer);
 
+	ft_memset(buffer, 'B', buffer_size);
+    printf("Buffer después de ft_memset: %s\n", buffer);
+
     memset(buffer, 'A', buffer_size);
     printf("Buffer después de memset estándar: %s\n", buffer);
-
-    ft_memset(buffer, 'B', buffer_size);
-    printf("Buffer después de ft_memset: %s\n", buffer);
 
     return 0;
 }

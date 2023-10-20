@@ -31,20 +31,7 @@ int main()
    while (cadena[i])
    { 
       printf("%c, %d\n", cadena[i], ft_isalnum(cadena[i]));
-	  i++;
-   }
-   return 0;
-}
-
-int main()
-{
-   char cadena[] = ";0sR(h&R1/";
-   int i;
-
-   i = 0;
-   while(cadena[i])
-   {
-      printf("%c, %d\n", cadena[i], isalnum(cadena[i]));
+      //printf("%c, %d\n", cadena[i], isalnum(cadena[i]));
 	  i++;
    }
    return 0;

@@ -18,7 +18,8 @@ void	ft_putendl_fd(char *s, int fd)
 	write(fd, "\n", 1);
 }
 /*
-int main() {
+int main()
+{
     char *message = "Hello, World!";
     int file_descriptor = 1;
 

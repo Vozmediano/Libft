@@ -12,26 +12,47 @@
 
 #include "libft.h"
 
-char	*ft_strmapi(char *s, char (*f)(unsigned int, char))
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char	*new;
-	size_t	len;
-	size_t	i;
+	int		i;
+	char	*buffer;
 
 	i = 0;
-	if (!s)
-		return (ft_strdup(""));
-	len = ft_strlen(s);
-	new = (char *)malloc(sizeof(char) * (len + 1));
-	if (new == NULL)
+	while (s[i])
+		i++;
+	buffer = (char *)malloc(i + 1);
+	if (buffer == NULL)
 		return (NULL);
-	while (i < len)
+	i = 0;
+	while (s[i])
 	{
-		new[i] = (*f)(i, s[i]);
+		buffer[i] = (*f)(i, s[i]);
 		i++;
 	}
-	new[i] = '\0';
-	return (new);
+	buffer[i] = 0;
+	return (buffer);
 }
+/*
+#include <stdio.h>
 
-/*solo falta main*/
+static char transform_char(unsigned int index, char c)
+{
+	if (index % 2 == 0)
+        return (ft_toupper(c));
+    else
+        return (ft_tolower(c));
+}
+int main()
+{
+    const char *original = "Hello, World!";
+
+    char *modified = ft_strmapi(original, transform_char);
+
+    printf("Original string: %s\n", original);
+    printf("Modified string: %s\n", modified);
+
+    free(modified);
+
+    return 0;
+}
+*/

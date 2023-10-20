@@ -17,7 +17,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	unsigned int	i;
 
 	i = 0;
-	while (i < n && (s1[i] && s2[i]))
+	while (i < n && (s1[i] != '\0' && s2[i] != '\0'))
 	{
 		if (s1[i] != s2[i])
 			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
@@ -29,15 +29,8 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	return (0);
 }
 /*
-int main()
-{
-	char ptrs1[] = "asefg";
-	char ptrs2[] = "asdfghjkl";
-
-	printf("%d\n", ft_strncmp(ptrs1, ptrs2, 5));
-	printf("%d\n", strncmp(ptrs1, ptrs2, 5));
-	return (0);
-}
+#include <stdio.h>
+#include <string.h>
 
 int main()
 {
@@ -46,10 +39,11 @@ int main()
     size_t n = 8;
 
     int result = ft_strncmp(str1, str2, n);
+	//int result = strncmp(str1, str2, n);
 
     printf("str1: %s\n", str1);
     printf("str2: %s\n", str2);
-    printf("Comparison result: %d\n", result);
+    printf("En la posicion %zu str1 difiere de str2 %d veces\n", n, result);
 
     return 0;
 }

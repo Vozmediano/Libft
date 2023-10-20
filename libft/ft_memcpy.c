@@ -41,6 +41,7 @@ int main() {
     size_t copy_size = 4;
 
     ft_memcpy(destination, source, copy_size);
+	//memcpy(destination, source, copy_size);
 
     printf("Source: %s\n", source);
     printf("Destination: %s\n", destination);

@@ -29,21 +29,8 @@ int main()
    i = 0;
    while(cadena[i])
    {
-      printf("%c, %d\n", cadena[i], isprint(cadena[i]));
-	  i++;
-   }
-   return 0;
-}
-
-int main()
-{
-   char cadena[] = ";0 ñ\003sáR(h &~?\177RÛ 1/";
-   int i;
-
-   i = 0;
-   while(cadena[i])
-   {
       printf("%c, %d\n", cadena[i], ft_isprint(cadena[i]));
+      //printf("%c, %d\n", cadena[i], isprint(cadena[i]));
 	  i++;
    }
    return 0;

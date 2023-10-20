@@ -57,20 +57,22 @@ char	*ft_itoa(int n)
 	}
 	return (result);
 }
-// #include <stdio.h>
+/*
+#include <stdio.h>
 
-// int main() 
-// {
-//     int number = 1000;
-//     char *result = ft_itoa(number);
+int main() 
+{
+    int number = 1000;
+    char *result = ft_itoa(number);
 
-//     if (result) 
-// 	{
-//         printf("Number: %d\nResult: %s\n", number, result);
-//         free(result);
-//     } 
-// 	else
-//         printf("Error: Memory allocation failed.\n");
+    if (result) 
+	{
+        printf("Number: %d\nResult: %s\n", number, result);
+        free(result);
+    } 
+	else
+        printf("Error: Fallo en memoria alojada.\n");
 
-//     return 0;
-// }
+    return 0;
+}
+*/

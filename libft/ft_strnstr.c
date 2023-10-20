@@ -43,25 +43,10 @@ int main()
     size_t len = 10;
 
     char *result = ft_strnstr(haystack, needle, len);
+	//char *result = strnstr(haystack, needle, len);
 
     if (result != NULL)
         printf("Needle se encontro en la posicion: %s\n", result);
-    else
-        printf("Needle no se encontro en haystack.\n");
-
-    return 0;
-}
-
-int main()
-{
-    const char haystack[] = "Hello, World!";
-    const char needle[] = "World";
-    size_t len = 10;
-
-	char *result = strnstr(haystack, needle, len);
-
-    if (result != NULL)
-		printf("%s\n", result);
     else
         printf("Needle no se encontro en haystack.\n");
 

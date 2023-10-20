@@ -35,6 +35,7 @@ int main()
     size_t compare_size = 8;
 
     int result = ft_memcmp(str1, str2, compare_size);
+    //int result = memcmp(str1, str2, compare_size);
 
     if (result < 0)
         printf("str1 es menor que str2\n");

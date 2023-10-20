@@ -31,22 +31,9 @@ int main()
    while (cadena[i] != '\0')
    {
 		printf("%c, %d\n", cadena[i], ft_isdigit(cadena[i]));
+      //printf("%c, %d\n", cadena[i], isdigit(cadena[i]));
 		i++;
    }
    return 0;
-}
-
-int main()
-{
-   char cadena[] = "er&/v3=24-.?3ac";
-   int i;
-	
-   i = 0;
-   while (cadena[i] != '\0')
-	{
-		printf("%c, %d\n", cadena[i], isdigit(cadena[i]));
-		i++;
-	}
-	     return 0;
 }
 */

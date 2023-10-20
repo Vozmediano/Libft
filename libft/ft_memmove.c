@@ -47,6 +47,7 @@ int main() {
     size_t move_size = 4;
 
     ft_memmove(buffer, str, move_size);
+	//memmove(buffer, str, move_size);
 
     printf("Original string: %s\n", str);
     printf("Buffer after move: %s\n", buffer);

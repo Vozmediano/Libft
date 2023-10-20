@@ -1,37 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cvozmedi <cvozmedi@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/14 14:58:31 by cvozmedi          #+#    #+#             */
-/*   Updated: 2023/10/05 15:46:43 by cvozmedi         ###   ########.fr       */
+/*   Created: 2023/10/20 16:34:45 by cvozmedi          #+#    #+#             */
+/*   Updated: 2023/10/20 16:35:42 by cvozmedi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(int c)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
-		return (1);
-	return (0);
-}
-/*
-#include <stdio.h>
+	t_list	*first;
+	t_list	*new;
+	void	*content;
 
-int main()
-{
-	char cadena[] = ";0sR(h&R1/";
-	int i;
-	i = 0;
-	while (cadena[i] != '\0')
+	if (!f || !del)
+		return (NULL);
+	first = NULL;
+	while (lst)
 	{
-		printf("%c, %d\n", cadena[i], ft_isalpha(cadena[i]));
-		//printf("%c, %d\n", cadena[i], isalpha(cadena[i]));
-		i++;
+		content = (*f)(lst->content);
+		new = ft_lstnew(content);
+		if (!new)
+		{
+			(*del)(content);
+			ft_lstclear(&first, del);
+			return (0);
+		}
+		ft_lstadd_back(&first, new);
+		lst = lst->next;
 	}
-	return(0);
+	return (first);
 }
-*/

@@ -29,6 +29,6 @@ int main()
 
     ft_putstr_fd(str, file_descriptor);
 
-    return 0;
+    return (0);
 }
 */

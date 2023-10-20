@@ -31,10 +31,15 @@ char	*ft_strdup(const char *s)
 	return (result);
 }
 /*
+#include <stdio.h>
+#include <string.h>
+
 int main(void)
 {
 	char* ptr = "hola";
 	char* result = ft_strdup(ptr);
+	//char* result = strdup(ptr);
+
 	printf("%s\n", result);
 }
 */
