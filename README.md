@@ -1,1 +1,1 @@
-# ![Badge EN CONSTRUCCION](https://img.shields.io/badge/STATUS-EN%20CONSTRUCCION-green)
+![Badge TUTORIAL](https://img.shields.io/badge/LANGUAGE-C-red?style=flat&logo=c&logoColor=white&logoSize=auto)
